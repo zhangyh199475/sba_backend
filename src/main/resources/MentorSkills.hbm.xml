@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.ibm.apt.sba_back.domain.MentorSkills" table="mentor_skills" schema="sba">
+        <composite-id mapped="true" class="com.ibm.apt.sba_back.domain.MentorSkillsPK">
+            <key-property name="userId">
+                <column name="USER_ID" sql-type="int"/>
+            </key-property>
+            <key-property name="techId">
+                <column name="TECH_ID" sql-type="int"/>
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

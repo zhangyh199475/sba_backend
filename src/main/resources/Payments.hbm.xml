@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.ibm.apt.sba_back.domain.Payments" table="payments" schema="sba">
+        <id name="payId">
+            <column name="PAY_ID" sql-type="int"/>
+        </id>
+        <property name="studentId">
+            <column name="STUDENT_ID" sql-type="int"/>
+        </property>
+        <property name="mentorId">
+            <column name="MENTOR_ID" sql-type="int"/>
+        </property>
+        <property name="trainId">
+            <column name="TRAIN_ID" sql-type="int"/>
+        </property>
+        <property name="price">
+            <column name="PRICE" sql-type="int"/>
+        </property>
+    </class>
+</hibernate-mapping>

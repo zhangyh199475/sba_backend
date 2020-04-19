@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.ibm.apt.sba_back.domain.MentorCalendar" table="mentor_calendar" schema="sba">
+        <composite-id mapped="true" class="com.ibm.apt.sba_back.domain.MentorCalendarPK">
+            <key-property name="tranId">
+                <column name="TRAN_ID" sql-type="int"/>
+            </key-property>
+            <key-property name="userId">
+                <column name="USER_ID" sql-type="int"/>
+            </key-property>
+        </composite-id>
+        <property name="startDate">
+            <column name="START_DATE" sql-type="date"/>
+        </property>
+        <property name="endDate">
+            <column name="END_DATE" sql-type="date"/>
+        </property>
+    </class>
+</hibernate-mapping>

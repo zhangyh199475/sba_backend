@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.ibm.apt.sba_back.domain.Trainings" table="trainings" schema="sba">
+        <id name="trainId">
+            <column name="TRAIN_ID" sql-type="int"/>
+        </id>
+        <property name="techName">
+            <column name="TECH_NAME" sql-type="varchar(45)" length="45"/>
+        </property>
+        <property name="startDate">
+            <column name="START_DATE" sql-type="date"/>
+        </property>
+        <property name="endDate">
+            <column name="END_DATE" sql-type="date" not-null="true"/>
+        </property>
+        <property name="studentName">
+            <column name="STUDENT_NAME" sql-type="varchar(45)" length="45"/>
+        </property>
+        <property name="mentorName">
+            <column name="MENTOR_NAME" sql-type="varchar(45)" length="45"/>
+        </property>
+        <property name="received">
+            <column name="RECEIVED" sql-type="int"/>
+        </property>
+        <property name="active">
+            <column name="ACTIVE" sql-type="varchar(10)" length="10"/>
+        </property>
+        <property name="price">
+            <column name="PRICE" sql-type="int" not-null="true"/>
+        </property>
+        <property name="currentPrice">
+            <column name="CURRENT_PRICE" sql-type="int" not-null="true"/>
+        </property>
+        <property name="currentPercent">
+            <column name="CURRENT_PERCENT" sql-type="int" not-null="true"/>
+        </property>
+        <property name="rate">
+            <column name="RATE" sql-type="int" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
