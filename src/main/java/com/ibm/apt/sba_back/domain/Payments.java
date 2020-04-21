@@ -5,50 +5,50 @@ import javax.persistence.*;
 @Entity
 @Table(name = "payments", schema = "sba", catalog = "sba")
 public class Payments {
-    private int payId;
-    private int studentId;
-    private int mentorId;
-    private int trainId;
+    private Integer payId;
+    private Integer studentId;
+    private Integer mentorId;
+    private Integer trainId;
     private int price;
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "PAY_ID", nullable = false)
-    public int getPayId() {
+    public Integer getPayId() {
         return payId;
     }
 
-    public void setPayId(int payId) {
+    public void setPayId(Integer payId) {
         this.payId = payId;
     }
 
     @Basic
     @Column(name = "STUDENT_ID", nullable = false)
-    public int getStudentId() {
+    public Integer getStudentId() {
         return studentId;
     }
 
-    public void setStudentId(int studentId) {
+    public void setStudentId(Integer studentId) {
         this.studentId = studentId;
     }
 
     @Basic
     @Column(name = "MENTOR_ID", nullable = false)
-    public int getMentorId() {
+    public Integer getMentorId() {
         return mentorId;
     }
 
-    public void setMentorId(int mentorId) {
+    public void setMentorId(Integer mentorId) {
         this.mentorId = mentorId;
     }
 
     @Basic
     @Column(name = "TRAIN_ID", nullable = false)
-    public int getTrainId() {
+    public Integer getTrainId() {
         return trainId;
     }
 
-    public void setTrainId(int trainId) {
+    public void setTrainId(Integer trainId) {
         this.trainId = trainId;
     }
 
@@ -80,7 +80,7 @@ public class Payments {
 
     @Override
     public int hashCode() {
-        int result = payId;
+        Integer result = payId;
         result = 31 * result + studentId;
         result = 31 * result + mentorId;
         result = 31 * result + trainId;

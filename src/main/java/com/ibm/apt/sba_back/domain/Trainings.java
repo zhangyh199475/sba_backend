@@ -6,7 +6,7 @@ import java.sql.Date;
 @Entity
 @Table(name = "trainings", schema = "sba", catalog = "sba")
 public class Trainings {
-    private int trainId;
+    private Integer trainId;
     private String techName;
     private Date startDate;
     private Date endDate;
@@ -21,11 +21,11 @@ public class Trainings {
 
     @Id
     @Column(name = "TRAIN_ID", nullable = false)
-    public int getTrainId() {
+    public Integer getTrainId() {
         return trainId;
     }
 
-    public void setTrainId(int trainId) {
+    public void setTrainId(Integer trainId) {
         this.trainId = trainId;
     }
 
@@ -167,7 +167,7 @@ public class Trainings {
 
     @Override
     public int hashCode() {
-        int result = trainId;
+        Integer result = trainId;
         result = 31 * result + (techName != null ? techName.hashCode() : 0);
         result = 31 * result + (startDate != null ? startDate.hashCode() : 0);
         result = 31 * result + (endDate != null ? endDate.hashCode() : 0);

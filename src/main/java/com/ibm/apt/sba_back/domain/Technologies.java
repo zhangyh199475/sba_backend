@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "technologies", schema = "sba", catalog = "sba")
 public class Technologies {
-    private int techId;
+    private Integer techId;
     private String techName;
     private String type;
     private int active;
@@ -14,11 +14,11 @@ public class Technologies {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "TECH_ID", nullable = false)
-    public int getTechId() {
+    public Integer getTechId() {
         return techId;
     }
 
-    public void setTechId(int techId) {
+    public void setTechId(Integer techId) {
         this.techId = techId;
     }
 
@@ -80,7 +80,7 @@ public class Technologies {
 
     @Override
     public int hashCode() {
-        int result = techId;
+        Integer result = techId;
         result = 31 * result + (techName != null ? techName.hashCode() : 0);
         result = 31 * result + (type != null ? type.hashCode() : 0);
         result = 31 * result + active;

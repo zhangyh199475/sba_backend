@@ -5,26 +5,26 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 public class MentorCalendarPK implements Serializable {
-    private int tranId;
-    private int userId;
+    private Integer tranId;
+    private Integer userId;
 
     @Column(name = "TRAN_ID", nullable = false)
     @Id
-    public int getTranId() {
+    public Integer getTranId() {
         return tranId;
     }
 
-    public void setTranId(int tranId) {
+    public void setTranId(Integer tranId) {
         this.tranId = tranId;
     }
 
     @Column(name = "USER_ID", nullable = false)
     @Id
-    public int getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
@@ -43,7 +43,7 @@ public class MentorCalendarPK implements Serializable {
 
     @Override
     public int hashCode() {
-        int result = tranId;
+        Integer result = tranId;
         result = 31 * result + userId;
         return result;
     }

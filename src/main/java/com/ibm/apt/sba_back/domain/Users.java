@@ -6,7 +6,7 @@ import java.sql.Date;
 @Entity
 @Table(name = "users", schema = "sba", catalog = "sba")
 public class Users {
-    private int userId;
+    private Integer userId;
     private String userName;
     private String password;
     private int roleId;
@@ -21,11 +21,11 @@ public class Users {
 
     @Id
     @Column(name = "USER_ID", nullable = false)
-    public int getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
@@ -167,7 +167,7 @@ public class Users {
 
     @Override
     public int hashCode() {
-        int result = userId;
+        Integer result = userId;
         result = 31 * result + (userName != null ? userName.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
         result = 31 * result + roleId;

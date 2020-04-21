@@ -6,27 +6,27 @@ import javax.persistence.*;
 @Table(name = "mentor_skills", schema = "sba", catalog = "sba")
 @IdClass(MentorSkillsPK.class)
 public class MentorSkills {
-    private int userId;
-    private int techId;
+    private Integer userId;
+    private Integer techId;
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "USER_ID", nullable = false)
-    public int getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
     @Id
     @Column(name = "TECH_ID", nullable = false)
-    public int getTechId() {
+    public Integer getTechId() {
         return techId;
     }
 
-    public void setTechId(int techId) {
+    public void setTechId(Integer techId) {
         this.techId = techId;
     }
 
@@ -45,7 +45,7 @@ public class MentorSkills {
 
     @Override
     public int hashCode() {
-        int result = userId;
+        Integer result = userId;
         result = 31 * result + techId;
         return result;
     }

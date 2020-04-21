@@ -7,29 +7,29 @@ import java.sql.Date;
 @Table(name = "mentor_calendar", schema = "sba", catalog = "sba")
 @IdClass(MentorCalendarPK.class)
 public class MentorCalendar {
-    private int tranId;
-    private int userId;
+    private Integer tranId;
+    private Integer userId;
     private Date startDate;
     private Date endDate;
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "TRAN_ID", nullable = false)
-    public int getTranId() {
+    public Integer getTranId() {
         return tranId;
     }
 
-    public void setTranId(int tranId) {
+    public void setTranId(Integer tranId) {
         this.tranId = tranId;
     }
 
     @Id
     @Column(name = "USER_ID", nullable = false)
-    public int getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
@@ -70,7 +70,7 @@ public class MentorCalendar {
 
     @Override
     public int hashCode() {
-        int result = tranId;
+        Integer result = tranId;
         result = 31 * result + userId;
         result = 31 * result + (startDate != null ? startDate.hashCode() : 0);
         result = 31 * result + (endDate != null ? endDate.hashCode() : 0);
